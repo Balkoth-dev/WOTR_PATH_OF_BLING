@@ -7,7 +7,7 @@ This mod is for Pathfinder: Wrath of the Righteous, it contains a number of chan
 ```
 1. Download and install Unity Mod Manager, make sure it is at least version 0.23.0
 2. Run Unity Mod Manger and set it up to find Wrath of the Righteous
-3. Download the WOTR_PATH_OF_RAGE mod
+3. Download the WOTR_PATH_OF_BLING mod
 4. Install the mod by dragging the zip file from step 3 into the Unity Mod Manager window under the Mods tab
 ```
 ## Changes
@@ -35,7 +35,7 @@ This mod is for Pathfinder: Wrath of the Righteous, it contains a number of chan
 * Legendary Proportions no longer changes your size to Huge. This is because it conflicts with Abyssal Bulk from Bloodragers, and it's not tabletop compliant.
 ```
 ## Current New Abilities
-![alt text](https://github.com/Balkoth-dev/WOTR_PATH_OF_RAGE/blob/master/PathOfRageDemonologies.png?raw=true)
+![alt text](https://github.com/Balkoth-dev/WOTR_PATH_OF_BLING/blob/master/PathOfRageDemonologies.png?raw=true)
 ## Change Log
 ```
 03/11/2022

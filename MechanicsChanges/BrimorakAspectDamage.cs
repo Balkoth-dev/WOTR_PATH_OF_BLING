@@ -7,7 +7,7 @@ using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.Utility;
 using System;
 
-namespace WOTR_PATH_OF_RAGE.MechanicsChanges
+namespace WOTR_PATH_OF_BLING.MechanicsChanges
 {
     [TypeId("a584568f53d2454a97a48123d6f7d78f")]
     public class BrimorakAspectDamage : UnitFactComponentDelegate, IInitiatorRulebookHandler<RuleCalculateDamage>, IRulebookHandler<RuleCalculateDamage>, ISubscriber, IInitiatorRulebookSubscriber

@@ -2,7 +2,7 @@ using Kingmaker.Blueprints;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using WOTR_PATH_OF_RAGE;
+using WOTR_PATH_OF_BLING;
 
 namespace BlueprintCore.Utils
 {

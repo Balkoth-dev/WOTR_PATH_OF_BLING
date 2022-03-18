@@ -2,10 +2,10 @@
 using System;
 using System.IO;
 using UnityModManagerNet;
-using WOTR_PATH_OF_RAGE.Utilities;
+using WOTR_PATH_OF_BLING.Utilities;
 using ModKit;
 
-namespace WOTR_PATH_OF_RAGE
+namespace WOTR_PATH_OF_BLING
 {
     public class Main
     {

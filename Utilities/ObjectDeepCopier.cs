@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WOTR_PATH_OF_RAGE.Utilities
+namespace WOTR_PATH_OF_BLING.Utilities
 {
     class ObjectDeepCopier
     {

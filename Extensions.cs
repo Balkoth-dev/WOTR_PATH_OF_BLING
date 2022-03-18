@@ -3,7 +3,7 @@ using Kingmaker.Blueprints;
 using System;
 using System.Linq;
 
-namespace WOTR_PATH_OF_RAGE
+namespace WOTR_PATH_OF_BLING
 {
     static class Extensions
     {

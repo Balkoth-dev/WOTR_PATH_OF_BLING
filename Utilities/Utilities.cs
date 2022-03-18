@@ -10,7 +10,7 @@ using System.Linq;
 using UnityEngine;
 using static UnityModManagerNet.UnityModManager;
 
-namespace WOTR_PATH_OF_RAGE.Utilities
+namespace WOTR_PATH_OF_BLING.Utilities
 {
     class AssetLoader
     {
