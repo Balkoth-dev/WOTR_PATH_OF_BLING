@@ -1,6 +1,7 @@
 # PATH OF BLING
 
 This mod is for Pathfinder: Wrath of the Righteous, it contains a number of changes for the Gold Dragon mythic path. This includes bug fixes and enhancements.
+Any change may be toggled on or off as the user wills.
 
 ## How to Install
 
@@ -14,6 +15,7 @@ This mod is for Pathfinder: Wrath of the Righteous, it contains a number of chan
 ```
 * Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack.
 * The golden dragon breath is now a move action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.
+* The golden dragon breath's debuff will now stack.
 * Gives a unique icon to the Gold Dragon Form.
 * Gives the Gold Dragon Form a mythic bonus of plus two to all mental stats.
 * Gives a Gold Dragon a divine spontaneous spellbook.

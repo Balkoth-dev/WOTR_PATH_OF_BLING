@@ -6,11 +6,13 @@ using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Designers.EventConditionActionSystem.Actions;
 using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.ElementsSystem;
+using Kingmaker.Enums;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Abilities.Components.AreaEffects;
 using Kingmaker.UnitLogic.ActivatableAbilities.Restrictions;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
+using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Mechanics.Actions;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
@@ -38,6 +40,7 @@ namespace WOTR_PATH_OF_BLING.Patches
                 Initialized = true;
 
                 PatchGoldenDragonBreathAbility();
+                UpgradeGoldenDragonBreathDebuff();
 
                 Main.Log("Patching Golden Dragon Breath Ability");
             }
@@ -66,7 +69,7 @@ namespace WOTR_PATH_OF_BLING.Patches
                                                 "This cooldown is removed on a new round if you are transformed into your golden dragon form.";
 
                 goldenDragonBreathAbility.m_Description = Helpers.CreateString(goldenDragonBreathAbility + ".Description", newGoldenDragonBreathDescription);
-                goldenDragonBreathAbility.ActionType = Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Move;
+                goldenDragonBreathAbility.ActionType = Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free;
 
                 var dragonFormBuffRef = BlueprintTool.Get<BlueprintBuff>("dbe1d6ac18ad4eafb4f6d24e48eb12dc").ToReference<BlueprintUnitFactReference>();
 
@@ -100,6 +103,31 @@ namespace WOTR_PATH_OF_BLING.Patches
                     c.CombatEndActions = new ActionList();
                     c.CombatEndActions.Actions = new GameAction[] { conditionalBuffEffects };
                 });
+
+            }
+            static void UpgradeGoldenDragonBreathDebuff()
+            {
+                if (Main.settings.UpgradeGoldenDragonBreathDebuff == false)
+                {
+                    return;
+                }
+
+                var goldenDragonBreathDebuff = BlueprintTool.Get<BlueprintBuff>("b29c5db31614ae444a9eda0132b71d5d");
+                goldenDragonBreathDebuff.Stacking = StackingType.Stack;
+
+                goldenDragonBreathDebuff.EditComponent<ModifyD20>(c =>
+                {
+                    c.BonusDescriptor = ModifierDescriptor.UntypedStackable;
+                });
+
+                var goldenDragonBreathDebuffHalf = BlueprintTool.Get<BlueprintBuff>("462ef3487d0065248ac3052a96892653");
+                goldenDragonBreathDebuffHalf.Stacking = StackingType.Stack;
+
+                goldenDragonBreathDebuffHalf.EditComponent<ModifyD20>(c =>
+                {
+                    c.BonusDescriptor = ModifierDescriptor.UntypedStackable;
+                });
+
 
             }
         }

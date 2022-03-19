@@ -13,9 +13,10 @@ namespace WOTR_PATH_OF_BLING
         {
             public bool PatchGoldDragonSpellDamage = true;
             public bool PatchGoldenDragonBreathAbility = true;
+            public bool UpgradeGoldenDragonBreathDebuff = true;
             public bool PatchGoldenDragonFormIcon = true;
             public bool PatchGoldenDragonFormAbility = true;
-            public bool AddGoldDragonSpellbook = true;
+            public bool AddGoldDragonSpellbook = true; 
 
             public override void Save(UnityModManager.ModEntry modEntry)
             {
@@ -69,6 +70,15 @@ namespace WOTR_PATH_OF_BLING
                 else
                 {
                     UI.Label("Gold Dragon Breath is unchanged.".red().size(10));
+                }
+                UI.Toggle("Upgrade Gold Dragon Breath Debuff".bold(), ref settings.UpgradeGoldenDragonBreathDebuff);
+                if (settings.UpgradeGoldenDragonBreathDebuff)
+                {
+                    UI.Label("The golden dragon breath's debuff will now stack.".green().size(10));
+                }
+                else
+                {
+                    UI.Label("Gold Dragon Breath's debuff is unchanged.".red().size(10));
                 }
                 UI.Toggle("Gold Dragon Form Icon Update".bold(), ref settings.PatchGoldenDragonFormIcon);
                 if (settings.PatchGoldenDragonFormIcon)

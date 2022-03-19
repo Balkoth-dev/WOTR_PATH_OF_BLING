@@ -62,6 +62,7 @@ namespace WOTR_PATH_OF_BLING.Spellbook
                     bp.m_SpellList = goldenDragonSpelllist.ToReference<BlueprintSpellListReference>();
                     bp.Spontaneous = true;
                     bp.AllSpellsKnown = true;
+                    bp.CastingAttribute = Kingmaker.EntitySystem.Stats.StatType.Charisma;
                 });
 
                 Helpers.AddBlueprint(goldenDragonSpellbook, goldenDragonSpellbookGuid);
