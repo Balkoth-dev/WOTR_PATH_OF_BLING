@@ -69,7 +69,7 @@ namespace WOTR_PATH_OF_BLING.Patches
                                                 "This cooldown is removed on a new round if you are transformed into your golden dragon form.";
 
                 goldenDragonBreathAbility.m_Description = Helpers.CreateString(goldenDragonBreathAbility + ".Description", newGoldenDragonBreathDescription);
-                goldenDragonBreathAbility.ActionType = Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Free;
+                goldenDragonBreathAbility.ActionType = Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Move;
 
                 var dragonFormBuffRef = BlueprintTool.Get<BlueprintBuff>("dbe1d6ac18ad4eafb4f6d24e48eb12dc").ToReference<BlueprintUnitFactReference>();
 
