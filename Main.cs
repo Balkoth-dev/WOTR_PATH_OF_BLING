@@ -11,25 +11,11 @@ namespace WOTR_PATH_OF_BLING
     {
         public class Settings : UnityModManager.ModSettings
         {
-            public bool PatchDemonRage = true;
-            public bool AddDemonSpecialSelectionToMythic = true;
-            public bool PatchBrimorakAspect = true;
-            public bool PatchKalavakusAspect = true;
-            public bool PatchShadowDemonAspect = true;
-            public bool PatchSuccubusAspect = true;
-            public bool PatchDemonAspectIcons = true;
-            public bool PatchBaseRagesForDemon = true;
-            public bool PatchAbyssalStorm = true;
-            public bool PatchBloodHaze = true;
-            public bool AddDemonBlast = true;
-            public bool PatchDemonLordAspects = true;
-            public bool AddLilithuAspect = true;
-            public bool AddQuasitAspect = true;
-            public bool PatchDemonicAura = true;
-            public bool PatchAutometamagic = true;
-            public bool AddMightyDemonrage = true;
-            public bool PatchNocticulaAspect = true;
-            public bool PatchLegendaryProportions = true;
+            public bool PatchGoldDragonSpellDamage = true;
+            public bool PatchGoldenDragonBreathAbility = true;
+            public bool PatchGoldenDragonFormIcon = true;
+            public bool PatchGoldenDragonFormAbility = true;
+            public bool AddGoldDragonSpellbook = true;
 
             public override void Save(UnityModManager.ModEntry modEntry)
             {
@@ -65,177 +51,51 @@ namespace WOTR_PATH_OF_BLING
             UI.AutoWidth(); UI.Div(0, 15);
             using (UI.VerticalScope())
             {
-                UI.Label("SETTINGS WILL NOT BE UPDATED UNTIL YOU RESTART YOUR GAME.".red().bold().size(20));
-                UI.Toggle("Demon Rage Rework".bold(), ref settings.PatchDemonRage);
-                if(settings.PatchDemonRage)
+                UI.Label("SETTINGS WILL NOT BE UPDATED UNTIL YOU RESTART YOUR GAME.".yellow().bold().size(20));
+                UI.Toggle("Gold Dragon Spell Damage Fix".bold(), ref settings.PatchGoldDragonSpellDamage);
+                if(settings.PatchGoldDragonSpellDamage)
                 {
-                    UI.Label("Includes a number of changes to Demon Rage. This is now a toggleable ability that will consume a number of rounds instead of per-combat and a new icon is added.".green().size(10));
+                    UI.Label("Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack.".green().size(10));
                 }
                 else
                 {
-                    UI.Label("Demon Rage is unchanged. It is suggested to turn off Special Abilites as well.".red().size(10));
+                    UI.Label("Spell Damage Dice Progression is unchanged.".red().size(10));
                 }
-                UI.Toggle("Allow Special Abilities".bold(), ref settings.AddDemonSpecialSelectionToMythic);
-                if (settings.AddDemonSpecialSelectionToMythic)
+                UI.Toggle("Gold Dragon Breath Upgrade".bold(), ref settings.PatchGoldenDragonBreathAbility);
+                if (settings.PatchGoldenDragonBreathAbility)
                 {
-                    UI.Label("When you gain your Demon path, new special abilites called Demonologies are unlocked, allowing more rounds of rage per day.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("No special abilites will be added.".red().size(10));
-                }
-                UI.Toggle("Brimorak Aspect Fix".bold(), ref settings.PatchBrimorakAspect);
-                if (settings.PatchBrimorakAspect)
-                {
-                    UI.Label("Brimorak Aspect uses a new component to fix its expected scaling".green().size(10));
+                    UI.Label("The golden dragon breath is now a swift action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.".green().size(10));
                 }
                 else
                 {
-                    UI.Label("Brimorak Aspect is unchanged from vanilla".red().size(10));
+                    UI.Label("Gold Dragon Breath is unchanged.".red().size(10));
                 }
-                UI.Toggle("Succubus Aspect Fix".bold(), ref settings.PatchSuccubusAspect);
-                if (settings.PatchSuccubusAspect)
+                UI.Toggle("Gold Dragon Form Icon Update".bold(), ref settings.PatchGoldenDragonFormIcon);
+                if (settings.PatchGoldenDragonFormIcon)
                 {
-                    UI.Label("Succubus Aspect now properly gives a malus to Attack Bonus instead of AC".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Succubus Aspect is unchanged from vanilla".red().size(10));
-                }
-                UI.Toggle("Kalvakus Aspect Fix".bold(), ref settings.PatchKalavakusAspect);
-                if (settings.PatchKalavakusAspect)
-                {
-                    UI.Label("Kalvakus Aspect's bonus attack will only work while you have a melee weapon.".green().size(10));
+                    UI.Label("Gives a unique icon to the Gold Dragon Form.".green().size(10));
                 }
                 else
                 {
-                    UI.Label("Kalvakus Aspect is unchanged from vanilla".red().size(10));
+                    UI.Label("Gold Dragon Form Icon is unchanged.".red().size(10));
                 }
-                UI.Toggle("Shadow Demon Aspect Fix".bold(), ref settings.PatchShadowDemonAspect);
-                if (settings.PatchShadowDemonAspect)
+                UI.Toggle("Gold Dragon Form Ability Update".bold(), ref settings.PatchGoldenDragonFormAbility);
+                if (settings.PatchGoldenDragonFormAbility)
                 {
-                    UI.Label("Shadow Demon Aspect will no longer give double the wisdom bonus when toggled.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Shadow Demon Aspect is unchanged from vanilla".red().size(10));
-                }
-                UI.Toggle("Demon Aspect Icons Change".bold(), ref settings.PatchDemonAspectIcons);
-                if (settings.PatchDemonAspectIcons)
-                {
-                    UI.Label("Adds new icons to each aspect making it easier to tell them apart.".green().size(10));
+                    UI.Label("Gives the Gold Dragon Form a mythic bonus of plus two to all mental stats.".green().size(10));
                 }
                 else
                 {
-                    UI.Label("Aspect icons are unchanged from vanilla".red().size(10));
+                    UI.Label("Gold Dragon Form Icon is unchanged.".red().size(10));
                 }
-                /* UI.Toggle("Demon Lord Aspects Progression Fix".bold(), ref settings.PatchDemonLordAspects);
-                  if (settings.PatchDemonLordAspects)
-                  {
-                      UI.Label("Demon Lord Aspects are written to be given one at 9 and another at 10. This fixes that.".green().size(10));
-                  } 
-                  else
-                  {
-                      UI.Label("Demon Lord Aspect progression is unchanged.".red().size(10));
-                  } This was fixed in 1.2 */
-                UI.Toggle("Allow Toggling Of Rages".bold(), ref settings.PatchBaseRagesForDemon);
-                if (settings.PatchBaseRagesForDemon)
+                UI.Toggle("Gold Dragon Spellbook Added".bold(), ref settings.AddGoldDragonSpellbook);
+                if (settings.AddGoldDragonSpellbook)
                 {
-                    UI.Label("Allows you to toggle Barbarian and Bloodrager rages while in a demon rage.".green().size(10));
+                    UI.Label("Gives a Gold Dragon a divine spontaneous spellbook.".green().size(10));
                 }
                 else
                 {
-                    UI.Label("Barbarian and Bloodrager rages are unchanged from vanilla".red().size(10));
-                }
-                UI.Toggle("Abyssal Storm Fix".bold(), ref settings.PatchAbyssalStorm);
-                if (settings.PatchAbyssalStorm)
-                {
-                    UI.Label("Abyssal Storm no longer hurts the caster.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Abyssal Storm is unchanged from vanilla".red().size(10));
-                }
-                UI.Toggle("Blood Haze Change".bold(), ref settings.PatchBloodHaze);
-                if (settings.PatchBloodHaze)
-                {
-                    UI.Label("Blood Haze now gives a +2 profane bonus to attack.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Blood Haze is unchanged from vanilla".red().size(10));
-                }
-                UI.Toggle("Demon Blast Addition".bold(), ref settings.AddDemonBlast);
-                if (settings.AddDemonBlast)
-                {
-                    UI.Label("At Mythic Rank 3 you gain an ability to use Demonic Charge that isn't a teleport. This is for instances where you can't use Demonic Charge".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Demonic Blast is not added".red().size(10));
-                }
-                UI.Toggle("Lilithu Aspect Addition".bold(), ref settings.AddLilithuAspect);
-                if (settings.AddLilithuAspect)
-                {
-                    UI.Label("As a Major demonic aspect you can select Lilithu, gaining a bonus to your Charisma as well as allowing all your spells and spell-like abilites to be considered using Selective Metamagic.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Lilithu Aspect is not added".red().size(10));
-                }
-                UI.Toggle("Quasit Aspect Addition".bold(), ref settings.AddQuasitAspect);
-                if (settings.AddQuasitAspect)
-                {
-                    UI.Label("As a Major demonic aspect you can select Quasit, gaining a bonus to your Dexterity and allowing all attacks to be rolled twice and take the highest result.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Quasit Aspect is not added".red().size(10));
-                }
-                UI.Toggle("Demonic Aura Fix".bold(), ref settings.PatchDemonicAura);
-                if (settings.PatchDemonicAura)
-                {
-                    UI.Label("Fixes Demonic Aura so that it will only apply its damage when an enemy starts a new round instead of every time you activate Bloodrage.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Demonic Aura is not fixed.".red().size(10));
-                }
-                UI.Toggle("Autometamagic Fix".bold(), ref settings.PatchAutometamagic);
-                if (settings.PatchAutometamagic)
-                {
-                    UI.Label("Fixes autometamagic so that it will work on spells that are not originally part of a spellbook but added later. This is important for Arcane Bloodline for Bloodragers.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Autometamagic is not fixed.".red().size(10));
-                }
-                UI.Toggle("Mighty Demonrage addition".bold(), ref settings.AddMightyDemonrage);
-                if (settings.AddMightyDemonrage)
-                {
-                    UI.Label("Adds a new mythic ability called Mighty Demonrage. This allows you to cast a demon spell of fourth level or lower as a swift action while Demon Raging.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Mighty Demonrage is not added.".red().size(10));
-                }
-                UI.Toggle("Patch Nocticula Aspect".bold(), ref settings.PatchNocticulaAspect);
-                if (settings.PatchNocticulaAspect)
-                {
-                    UI.Label("Changes Nocticula Aspect to have a unique icon icon. Changes the aspect to give bloodrage/barbarian rage like Channel Rage does. Changes to only use once per combat.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Nocticula Aspect is not changed.".red().size(10));
-                }
-                UI.Toggle("Patch Legendary Proportions".bold(), ref settings.PatchLegendaryProportions);
-                if (settings.PatchLegendaryProportions)
-                {
-                    UI.Label("Changes the Legendary Proportions to increase your size to Large instead of Huge. This is an annoying buff to use when you use Abyssal Bulk.".green().size(10));
-                }
-                else
-                {
-                    UI.Label("Legendary Proportions is not changed.".red().size(10));
+                    UI.Label("Spellbook is not added.".red().size(10));
                 }
             }
         }

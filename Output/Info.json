@@ -1,7 +1,7 @@
 {
     "AssemblyName": "WOTR_PATH_OF_BLING.dll",
     "Author": "Balkoth",
-    "DisplayName": "PATH OF RAGE",
+    "DisplayName": "PATH OF BLING",
     "EntryMethod": "WOTR_PATH_OF_BLING.Main.Load",
     "GameVersion": "1.2.0",
     "HomePage": "https://github.com/Balkoth-dev/WOTR_PATH_OF_BLING",

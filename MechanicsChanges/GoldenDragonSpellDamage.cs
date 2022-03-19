@@ -49,15 +49,18 @@ namespace WOTR_PATH_OF_BLING.MechanicsChanges
                 }
                 if (baseDamage.Dice.m_Dice < newDice)
                 {
+                    Main.Log("Dice Changed");
                     baseDamage.ReplaceDice(new DiceFormula(baseDamage.Dice.m_Rolls, newDice));
                 }
                 else
                 {
+                    Main.Log("Additional Damage Added");
                     int bonus = (1 * baseDamage.Dice.Rolls);
                     baseDamage.AddModifier(bonus, base.Fact);
                 }
                 if (CheckVulnerability(evt.Target))
                 {
+                    Main.Log("Vulnerability Found");
                     baseDamage.m_Vulnerability = 1.5f;
                 }
             }
@@ -70,14 +73,7 @@ namespace WOTR_PATH_OF_BLING.MechanicsChanges
                 AddEnergyVulnerability component = entityFact.Blueprint.GetComponent<AddEnergyVulnerability>();
                 if (component != null)
                 {
-                    List<ContextActionDealDamage> actionDealDamageList = TempList.Get<ContextActionDealDamage>();
-                    foreach (ContextActionDealDamage actionDealDamage6 in actionDealDamageList)
-                    {
-                        if (actionDealDamage6.DamageType.Type == DamageType.Energy && actionDealDamage6.DamageType.Energy == component.Type)
-                        {
-                            return true;
-                        }
-                    }
+                    return true;
                 }
             }
             return false;
