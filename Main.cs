@@ -56,7 +56,7 @@ namespace WOTR_PATH_OF_BLING
                 UI.Toggle("Gold Dragon Spell Damage Fix".bold(), ref settings.PatchGoldDragonSpellDamage);
                 if(settings.PatchGoldDragonSpellDamage)
                 {
-                    UI.Label("Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack.".green().size(10));
+                    UI.Label("Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack at mythic rank 10.".green().size(10));
                 }
                 else
                 {

@@ -13,7 +13,7 @@ Any change may be toggled on or off as the user wills.
 ```
 ## Changes
 ```
-* Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack.
+* Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack at mythic rank 10.
 * The golden dragon breath is now a move action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.
 * The golden dragon breath's debuff will now stack.
 * Gives a unique icon to the Gold Dragon Form.

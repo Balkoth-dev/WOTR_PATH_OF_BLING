@@ -58,10 +58,13 @@ namespace WOTR_PATH_OF_BLING.MechanicsChanges
                     int bonus = (1 * baseDamage.Dice.Rolls);
                     baseDamage.AddModifier(bonus, base.Fact);
                 }
-                if (CheckVulnerability(evt.Target))
+                if (base.Owner.Progression.MythicLevel == 10)
                 {
-                    Main.Log("Vulnerability Found");
-                    baseDamage.m_Vulnerability = 1.5f;
+                    if (CheckVulnerability(evt.Target))
+                    {
+                        Main.Log("Vulnerability Found");
+                        baseDamage.m_Vulnerability = 1.5f;
+                    }
                 }
             }
         }
