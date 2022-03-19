@@ -64,7 +64,7 @@ namespace WOTR_PATH_OF_BLING
                 UI.Toggle("Gold Dragon Breath Upgrade".bold(), ref settings.PatchGoldenDragonBreathAbility);
                 if (settings.PatchGoldenDragonBreathAbility)
                 {
-                    UI.Label("The golden dragon breath is now a swift action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.".green().size(10));
+                    UI.Label("The golden dragon breath is now a move action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.".green().size(10));
                 }
                 else
                 {

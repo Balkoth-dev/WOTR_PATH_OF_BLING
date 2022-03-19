@@ -13,7 +13,7 @@ This mod is for Pathfinder: Wrath of the Righteous, it contains a number of chan
 ## Changes
 ```
 * Spell Damage Dice Progression is changed to work as written. In addition, if an enemy has any energy vulnerability they'll be vulnerable to the attack.
-* The golden dragon breath is now a swift action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.
+* The golden dragon breath is now a move action instead of a standard and will scale damage off of your full mythic rank. Cooldown is negated when transformed into your gold dragon form.
 * Gives a unique icon to the Gold Dragon Form.
 * Gives the Gold Dragon Form a mythic bonus of plus two to all mental stats.
 * Gives a Gold Dragon a divine spontaneous spellbook.
