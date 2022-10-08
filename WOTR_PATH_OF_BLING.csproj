@@ -116,6 +116,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="MechanicsChanges\GoldenDragonSpellDamage.cs" />
+    <Compile Include="Patches\DragonLevel3Immunities.cs" />
     <Compile Include="Patches\GoldenDragonBreathAbility.cs" />
     <Compile Include="Patches\GoldenDragonForm.cs" />
     <Compile Include="Patches\GoldenDragonSpellDamageFeatures.cs" />
@@ -132,6 +133,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Output\Assets\Abilities\GoldDragonForm.png" />
+    <Content Include="Output\Assets\Abilities\HolyConversion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="Publicise" AfterTargets="Clean">

@@ -16,7 +16,8 @@ namespace WOTR_PATH_OF_BLING
             public bool UpgradeGoldenDragonBreathDebuff = true;
             public bool PatchGoldenDragonFormIcon = true;
             public bool PatchGoldenDragonFormAbility = true;
-            public bool AddGoldDragonSpellbook = true; 
+            public bool AddGoldDragonSpellbook = true;
+            public bool PatchDragonLevel3Immunities = true;
 
             public override void Save(UnityModManager.ModEntry modEntry)
             {
@@ -106,6 +107,15 @@ namespace WOTR_PATH_OF_BLING
                 else
                 {
                     UI.Label("Spellbook is not added.".red().size(10));
+                }
+                UI.Toggle("Holy Damage Conversion Toggle".bold(), ref settings.AddGoldDragonSpellbook);
+                if (settings.PatchDragonLevel3Immunities)
+                {
+                    UI.Label("Adds Holy Conversion toggle for Gold Dragon at mythic rank 9".green().size(10));
+                }
+                else
+                {
+                    UI.Label("Holy Conversion toggle for Gold Dragon not added.".red().size(10));
                 }
             }
         }

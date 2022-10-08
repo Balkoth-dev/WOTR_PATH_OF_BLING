@@ -47,15 +47,15 @@ namespace WOTR_PATH_OF_BLING.MechanicsChanges
                 {
                     newDice = DiceType.D10;
                 }
-                if (baseDamage.Dice.m_Dice < newDice)
+                if (baseDamage.Dice.BaseFormula.m_Dice < newDice)
                 {
                     Main.Log("Dice Changed");
-                    baseDamage.ReplaceDice(new DiceFormula(baseDamage.Dice.m_Rolls, newDice));
+                    baseDamage.Dice.Modify(new DiceFormula(baseDamage.Dice.BaseFormula.m_Rolls, newDice), (EntityFact)this.Fact);
                 }
                 else
                 {
                     Main.Log("Additional Damage Added");
-                    int bonus = (1 * baseDamage.Dice.Rolls);
+                    int bonus = (1 * baseDamage.Dice.BaseFormula.Rolls);
                     baseDamage.AddModifier(bonus, base.Fact);
                 }
                 if (base.Owner.Progression.MythicLevel == 10)
