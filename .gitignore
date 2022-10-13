@@ -364,3 +364,9 @@ FodyWeavers.xsd
 
 #lib
 lib/
+
+#dll
+*.dll
+
+#Output
+Output/
