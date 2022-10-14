@@ -24,7 +24,7 @@ Any change may be toggled on or off as the user wills.
 ```
 1.0.1
 Bug fixes to work with latest patch.
-Addition of Holy Conversion toggle at mythic rank 9
+Addition of Holy Conversion toggle at mythic rank 9.
 ```
 
 ## Special Thanks
