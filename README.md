@@ -22,6 +22,8 @@ Any change may be toggled on or off as the user wills.
 ```
 ## Change Log
 ```
+1.0.2
+Removed vulnerability addition at MR10 as now there's a holy conversion
 1.0.1
 Bug fixes to work with latest patch.
 Addition of Holy Conversion toggle at mythic rank 9.
