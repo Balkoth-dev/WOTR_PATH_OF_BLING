@@ -3,6 +3,8 @@
 This mod is for Pathfinder: Wrath of the Righteous, it contains a number of changes for the Gold Dragon mythic path. This includes bug fixes and enhancements.
 Any change may be toggled on or off as the user wills.
 
+## [![Download zip](https://github.com/Balkoth-dev/WOTR_PATH_OF_BLING/blob/master/downloadButtonBling.png?raw=true "Download zip")](https://github.com/Balkoth-dev/WOTR_PATH_OF_BLING/releases/latest/download/WOTR_PATH_OF_BLING.zip)
+
 ## How to Install
 
 ```
